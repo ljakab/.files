@@ -1,0 +1,4 @@
+# ~/.screenrc
+
+# Do not register the window in utmp
+deflogin off
