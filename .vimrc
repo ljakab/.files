@@ -44,7 +44,7 @@
 :autocmd FileType js set cindent nowrap expandtab tabstop=8 softtabstop=2 shiftwidth=2
 :autocmd FileType xml,xsd set expandtab tabstop=8 softtabstop=2 shiftwidth=2
 :autocmd FileType m set nowrap expandtab tabstop=8 softtabstop=4 shiftwidth=4
-:autocmd FileType text,tex set textwidth=78
+:autocmd FileType text,tex set autoindent textwidth=78
 :autocmd BufNewFile,BufRead *.txt,*.md,README set formatoptions+=n
 
 " Represent <TAB> characters with an underline
