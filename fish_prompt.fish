@@ -27,7 +27,7 @@ set -g __fish_git_prompt_color_cleanstate green bold
 function fish_prompt --description 'Write out the prompt'
 
 	set -l last_status $status
-	
+
 	# Just calculate these once, to save a few cycles when displaying the prompt
 	if not set -q __fish_prompt_hostname
 		set -g __fish_prompt_hostname (hostname|cut -d . -f 1)
@@ -41,10 +41,16 @@ function fish_prompt --description 'Write out the prompt'
 		set -g __fish_prompt_cwd (set_color $fish_color_cwd)
 	end
 
-	if not test $last_status -eq 0
-		set __fish_prompt_error (set_color $fish_color_error)
+	if not set -q __fish_prompt_status
+		set -g __fish_prompt_status (set_color $fish_color_status)
 	end
 
-	echo -n -s "$USER" @ "$__fish_prompt_hostname" ' ' "$__fish_prompt_cwd" (prompt_pwd) "$__fish_prompt_normal" (printf '%s' (__fish_git_prompt)) "$__fish_prompt_error" '> ' "$__fish_prompt_normal"
+	if not test $last_status -eq 0
+		set __fish_prompt_error (set_color $fish_color_error)
+		set prompt_status "$__fish_prompt_status [$last_status]$__fish_prompt_normal"
+	end
+
+	#echo -n -s "$USER" @ "$__fish_prompt_hostname" ' ' "$__fish_prompt_cwd" (prompt_pwd) "$__fish_prompt_normal" (__fish_git_prompt) "$__fish_prompt_error" '> ' "$__fish_prompt_normal"
+	echo -n -s "$USER" @ "$__fish_prompt_hostname" ' ' "$__fish_prompt_cwd" (prompt_pwd) "$__fish_prompt_normal" (__fish_git_prompt) "$prompt_status" '> '
 
 end
