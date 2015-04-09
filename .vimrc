@@ -46,6 +46,7 @@
 :autocmd FileType m set nowrap expandtab tabstop=8 softtabstop=4 shiftwidth=4
 :autocmd FileType text,tex set autoindent textwidth=78
 :autocmd BufNewFile,BufRead *.txt,*.md,README set formatoptions+=n
+:autocmd BufNewFile,BufRead *.yang set number cindent nowrap expandtab tabstop=8 softtabstop=4 shiftwidth=4 syntax=yang
 
 " Represent <TAB> characters with an underline
 :autocmd FileType c,cpp syntax match Tab /\t/
