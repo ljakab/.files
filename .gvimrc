@@ -1,7 +1,7 @@
 " ~/.gvimrc
 
 if has("gui_macvim")
-	set guifont=Monaco:h13
+	set guifont=Monaco:h12
 else
 	set guifont=Monaco\ 10
 endif
