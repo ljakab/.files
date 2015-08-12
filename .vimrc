@@ -33,7 +33,7 @@
 
 " By default, the .md extension is associated with the 'modula2' filetype
 " Since my .md files are MarkDown files, associate it with the 'text' filetype
-:autocmd BufNewFile,BufRead *.md setlocal filetype=text
+:autocmd BufNewFile,BufRead *.md,*.adoc,*.asciidoc setlocal filetype=text
 
 " Nostalgia (needs the appropriate color plugin in ~/.vim/colors/borland.vim)
 :autocmd FileType c,cpp colors borland
