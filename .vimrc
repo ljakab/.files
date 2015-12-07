@@ -39,7 +39,7 @@
 :autocmd FileType c,cpp colors borland
 
 " Customize indentation and text wrap preferences for some file types
-:autocmd FileType cpp,perl,python set number cindent nowrap expandtab tabstop=8 softtabstop=4 shiftwidth=4
+:autocmd FileType cpp,perl,python,json,java set number cindent nowrap expandtab tabstop=8 softtabstop=4 shiftwidth=4
 :autocmd FileType c set number cindent nowrap tabstop=8 softtabstop=4 shiftwidth=4
 :autocmd FileType js set cindent nowrap expandtab tabstop=8 softtabstop=2 shiftwidth=2
 :autocmd FileType xml,xsd set expandtab tabstop=8 softtabstop=2 shiftwidth=2
