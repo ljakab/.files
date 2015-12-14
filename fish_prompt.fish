@@ -42,7 +42,7 @@ function fish_prompt --description 'Write out the prompt'
 	end
 
 	if not set -q __fish_prompt_status
-		set -g __fish_prompt_status (set_color $fish_color_status)
+		set -g __fish_prompt_status (set_color red)
 	end
 
 	if not test $last_status -eq 0
@@ -50,7 +50,6 @@ function fish_prompt --description 'Write out the prompt'
 		set prompt_status "$__fish_prompt_status [$last_status]$__fish_prompt_normal"
 	end
 
-	#echo -n -s "$USER" @ "$__fish_prompt_hostname" ' ' "$__fish_prompt_cwd" (prompt_pwd) "$__fish_prompt_normal" (__fish_git_prompt) "$__fish_prompt_error" '> ' "$__fish_prompt_normal"
 	echo -n -s "$USER" @ "$__fish_prompt_hostname" ' ' "$__fish_prompt_cwd" (prompt_pwd) "$__fish_prompt_normal" (__fish_git_prompt) "$prompt_status" '> '
 
 end
