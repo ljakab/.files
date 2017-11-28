@@ -9,3 +9,8 @@ set -g -x MAVEN_OPTS "-Xmx2048m"
 
 # Set default Map-Resolver for lig
 set -g -x LISP_MAP_RESOLVER l3-london-mr-ms.rloc.lisp4.net
+
+# Source $HOME/.fishrc if it exists and we're interactive
+if status --is-interactive;
+    [ -e $HOME/.fishrc ]; and source $HOME/.fishrc
+end
