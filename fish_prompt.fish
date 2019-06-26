@@ -50,6 +50,10 @@ function fish_prompt --description 'Write out the prompt'
 		set prompt_status "$__fish_prompt_status [$last_status]$__fish_prompt_normal"
 	end
 
-	echo -n -s "$USER" @ "$__fish_prompt_hostname" ' ' "$__fish_prompt_cwd" (prompt_pwd) "$__fish_prompt_normal" (__fish_git_prompt) "$prompt_status" '> '
+	echo -n -s "$USER" @ "$__fish_prompt_hostname" ' ' "$__fish_prompt_cwd" (prompt_pwd)
+	if functions -q __kube_prompt
+		echo -n -s (set_color brblue) (__kube_prompt)
+	end
+	echo -n -s "$__fish_prompt_normal" (__fish_git_prompt) "$prompt_status" '> '
 
 end
