@@ -36,6 +36,7 @@
 :autocmd BufNewFile,BufRead *.md,*.adoc,*.asciidoc setlocal filetype=text
 
 " Default theme
+:set t_Co=256
 :colors leo
 
 " Nostalgia (needs the appropriate color plugin in ~/.vim/colors/borland.vim)
