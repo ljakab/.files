@@ -35,6 +35,9 @@
 " Since my .md files are MarkDown files, associate it with the 'text' filetype
 :autocmd BufNewFile,BufRead *.md,*.adoc,*.asciidoc setlocal filetype=text
 
+" Default theme
+:colors leo
+
 " Nostalgia (needs the appropriate color plugin in ~/.vim/colors/borland.vim)
 :autocmd FileType c,cpp colors borland
 
