@@ -15,7 +15,7 @@
 #"""
 
 # Increase command timout. Git on macOS takes quite a long time
-command_timeout = 1000
+command_timeout = 2000
 
 [username]
 format = "[$user]($style)"
