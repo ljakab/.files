@@ -1,0 +1,100 @@
+#format = """
+#$all\
+#$fill\
+#$time\
+#$line_break\
+#$aws\
+#$gcloud\
+#$openstack\
+#$azure\
+#$line_break\
+#$battery\
+#$status\
+#$shell\
+#$character
+#"""
+
+# Increase command timout. Git on macOS takes quite a long time
+command_timeout = 1000
+
+[username]
+format = "[$user]($style)"
+show_always = true
+
+[hostname]
+ssh_only = false
+ssh_symbol = "🌐"
+#ssh_symbol = "🛰️"
+format = "@[$hostname$ssh_symbol]($style) "
+
+[directory]
+truncation_length = 10
+
+[git_branch]
+format = '[\(](gray)[$branch(:$remote_branch)]($style)'
+#format = "[$symbol$branch(:$remote_branch)]($style)"
+
+[git_status]
+format = '([|$ahead_behind($all_status)\)]($style) )'
+#format = '([\($ahead_behind(|$all_status)\)]($style) )'
+ahead = "↑${count}"
+behind = "↓${count}"
+diverged = "↑${ahead_count}↓${behind_count}"
+up_to_date = "[✓](green)"
+untracked = "…"
+modified = "[*$count](blue)"
+staged = "[+$count](yellow)"
+deleted = "[-$count](red)"
+style = "gray"
+
+[java]
+symbol = " "
+
+[python]
+symbol = " "
+
+[terraform]
+format = "[$symbol]($style) "
+
+[memory_usage]
+threshold = -1
+format = "$symbol [${ram}( | ${swap})]($style) "
+symbol = " "
+disabled = true
+
+[aws]
+symbol = " "
+
+[gcloud]
+format = '[$symbol$account(@$domain)(:$project)(\($region\))]($style) '
+symbol = " "
+
+[cmd_duration]
+min_time = 0
+format = "⏱️ [$duration]($style) "
+
+[[battery.display]]
+threshold = 20
+
+[[battery.display]]
+threshold = 33
+style = "bold yellow"
+
+[[battery.display]]
+threshold = 99
+style = "bold green"
+
+[time]
+style = "bold bright-black"
+disabled = false
+
+[status]
+disabled = false
+
+# Replace the "❯" symbol in the prompt with "➜"
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[➜](bold red)"
+
+[fill]
+symbol = " "
