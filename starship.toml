@@ -34,9 +34,12 @@ truncation_length = 10
 format = '[\(](gray)[$branch(:$remote_branch)]($style)'
 #format = "[$symbol$branch(:$remote_branch)]($style)"
 
+[git_commit]
+format = "[\\($hash$tag\\)]($style)"
+
 [git_state]
 style = "gray"
-format = "[|$state($progress_current/$progress_total)]($style)"
+format = "[|$state( $progress_current/$progress_total)]($style)"
 
 [git_status]
 format = '([|$ahead_behind($all_status)]($style))[\)]($style) '
