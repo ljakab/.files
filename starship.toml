@@ -72,12 +72,18 @@ format = "$symbol [${ram}( | ${swap})]($style) "
 symbol = " "
 disabled = true
 
+# I don't use cloud accounts all that often, and they take up a LOT of space in
+# the prompt. I need to figure out a way to temporarily enable them when in
+# use. Maybe create some alias to the cloud CLI tools that use sed to change
+# disabled to false, but not sure how and when to revert the change.
 [aws]
 symbol = " "
+disabled = true
 
 [gcloud]
 format = '[$symbol$account(@$domain)(:$project)(\($region\))]($style) '
 symbol = " "
+disabled = true
 
 [cmd_duration]
 min_time = 0
