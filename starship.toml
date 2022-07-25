@@ -85,6 +85,9 @@ format = '[$symbol$account(@$domain)(:$project)(\($region\))]($style) '
 symbol = " "
 disabled = true
 
+[sudo]
+disabled = false
+
 [cmd_duration]
 min_time = 0
 format = "⏱️ [$duration]($style) "
