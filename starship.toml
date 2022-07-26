@@ -100,7 +100,7 @@ threshold = 33
 style = "bold yellow"
 
 [[battery.display]]
-threshold = 99
+threshold = 97
 style = "bold green"
 
 [time]
@@ -108,6 +108,10 @@ style = "bold bright-black"
 disabled = false
 
 [status]
+disabled = false
+
+[shell]
+#fish_indicator = ""
 disabled = false
 
 # Replace the "❯" symbol in the prompt with "➜"
