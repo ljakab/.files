@@ -1,3 +1,5 @@
+# ~/.config/starship.toml
+
 #format = """
 #$all\
 #$fill\
@@ -64,7 +66,8 @@ symbol = " "
 symbol = " "
 
 [terraform]
-format = "[$symbol]($style) "
+format = "[$symbol$workspace]($style) "
+#format = "[$symbol]($style) "
 
 [memory_usage]
 threshold = -1
