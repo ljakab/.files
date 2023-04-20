@@ -89,6 +89,7 @@ symbol = " "
 disabled = true
 
 [sudo]
+symbol = "💀 ⚡"
 disabled = false
 
 [cmd_duration]
