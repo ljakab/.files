@@ -72,7 +72,8 @@ format = "[$symbol$workspace]($style) "
 [memory_usage]
 threshold = -1
 format = "$symbol [${ram}( | ${swap})]($style) "
-symbol = " "
+#symbol = " "
+symbol = "𓇲 "
 disabled = true
 
 # I don't use cloud accounts all that often, and they take up a LOT of space in
@@ -94,7 +95,8 @@ disabled = false
 
 [cmd_duration]
 min_time = 0
-format = "⏱️ [$duration]($style) "
+#format = "⏱️ [$duration]($style) "
+format = "🕑 [$duration]($style) "
 
 [[battery.display]]
 threshold = 20
@@ -112,6 +114,8 @@ style = "bold bright-black"
 disabled = false
 
 [status]
+format = '[\[$symbol$common_meaning$signal_name$maybe_int\]]($style) '
+map_symbol = true
 disabled = false
 
 [shell]
