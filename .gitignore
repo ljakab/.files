@@ -1,0 +1,21 @@
+# Python virtual environment
+.virtualenv/
+.venv/
+
+# VSCode settings directory
+.vscode/
+
+# Vim swap files
+.*.sw?
+
+# LibreOffice lock files
+.~lock.*
+
+# macOS folder custom attributes file
+.DS_Store
+
+# My scratch directory
+_scratch_lori/
+
+# Claude Code local files
+*.local.md

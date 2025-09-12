@@ -59,6 +59,13 @@
 " The following line is suggested by the vim-LaTex package
 :set grepprg=grep\ -nH\ $*
 
+" GitHub Copilot
+let g:copilot_filetypes = {
+    \ 'gitcommit': v:true,
+    \ 'markdown': v:true,
+    \ 'yaml': v:true
+    \ }
+
 " Keyboard mappings
 :map <C-S-n> :tabnew<CR>
 ":nmap <F2> :mksession! ~/.vim/session/Session.vim<CR>
