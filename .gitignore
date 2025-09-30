@@ -19,3 +19,4 @@ _scratch_lori/
 
 # Claude Code local files
 *.local.md
+settings.local.json
