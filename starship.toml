@@ -19,6 +19,9 @@
 # Increase command timout. Git on macOS takes quite a long time
 command_timeout = 2000
 
+# Increase directory scan timeout. Default 30ms is to short for cold caches
+scan_timeout = 100
+
 [username]
 format = "[$user]($style)"
 show_always = true
