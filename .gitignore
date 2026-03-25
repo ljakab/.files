@@ -19,4 +19,5 @@ _scratch_lori/
 
 # Claude Code local files
 *.local.md
-settings.local.json
+**/.claude/settings.local.json
+**/.claude/skills/
