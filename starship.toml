@@ -20,7 +20,7 @@
 command_timeout = 2000
 
 # Increase directory scan timeout. Default 30ms is to short for cold caches
-scan_timeout = 100
+scan_timeout = 150
 
 [username]
 format = "[$user]($style)"
