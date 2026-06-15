@@ -7,7 +7,8 @@ if has("gui_macvim")
 	set guifont=Monaco:h12
 else
 "	set guifont=Monaco\ 10
-	set guifont=Screen\ 12
+"	set guifont=Screen\ 12
+	set guifont=PxPlus\ IBM\ VGA8\ 12
 endif
 
 colors anotherdark
